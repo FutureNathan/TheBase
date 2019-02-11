@@ -1,0 +1,17 @@
+<div class="note-content">
+    <div class="note-item" *ngFor="let note of this.notes.data; let i = index;">
+        <h3>
+            {{this.moment(note.dateCreated).format('MMMM Do YYYY')}}
+            <span>
+                at
+                {{this.moment(note.dateCreated).format('h:mm')}}
+            </span>
+        </h3>
+        <div class="tag-markers">
+            <div class="tag-marker {{note.tag.color}}"></div>
+        </div>
+        <p>
+            {{note.text}}
+        </p>
+    </div>
+</div>
