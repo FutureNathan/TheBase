@@ -1,0 +1,60 @@
+<div class="content">
+    <div class="wrap">
+        <h2>Your profile</h2>
+        <div class="inputs">
+            <div class="input">
+                <p>
+                    Email
+                    <span
+                        class="info easing"
+                        [class.red]="this.profile.validation.email.state === -1"
+                        [class.green]="this.profile.validation.email.state === 1">
+                        {{this.profile.validation.email.message}}
+                    </span>
+                </p>
+                <input type="email" [(ngModel)]="this.session.data.email" (input)="this.profile.verifyEmail()"/>
+            </div>
+            <div class="input input-button">
+                <a class="button easing easing-opacity" (click)="this.profile.update()">
+                    Update Email
+                </a>
+            </div>
+        </div>
+
+        <p
+            class="input-info"
+            [class.red]="this.profile.state.form.error === -1"
+            [class.green]="this.profile.state.form.error === 1">
+            {{this.profile.state.form.message}}
+        </p>
+
+        <h2>Update Password</h2>
+
+        <div class="inputs">
+            <div class="input">
+                <p>Current Password</p>
+                <input type="password" [(ngModel)]="this.profile.form.oldPassword"/>
+            </div>
+            <div class="input">
+                <p>New Password</p>
+                <input type="password" [(ngModel)]="this.profile.form.password"/>
+            </div>
+            <div class="input">
+                <p>Confirm New Password</p>
+                <input type="password" [(ngModel)]="this.profile.form.confirmPassword"/>
+            </div>
+            <div class="input input-button">
+                <a class="button easing easing-opacity" (click)="this.profile.updatePassword()">
+                    Update Password
+                </a>
+            </div>
+        </div>
+
+        <p
+            class="input-info"
+            [class.red]="this.profile.state.password.error === -1"
+            [class.green]="this.profile.state.password.error === 1">
+            {{this.profile.state.password.message}}
+        </p>
+    </div>
+</div>

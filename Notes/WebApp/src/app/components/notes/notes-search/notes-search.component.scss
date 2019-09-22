@@ -1,0 +1,46 @@
+@import "../../style.scss";
+
+div.search {
+    display: flex;
+    align-items: center;
+    position: relative;
+    width: 100%;
+    height: 70px;
+    padding: 0 15px;
+    i.fa-search {
+        position: absolute;
+        left: 35px;
+        top: 25px;
+        font-size: 18px;
+    }
+
+    input {
+        width: 100%;
+        height: 40px;
+        border: none;
+        background: $bg7;
+        color: $fg;
+        border-radius: 5px;
+        font-size: 14px;
+        padding: 0 15px 0 60px;
+    }
+
+    a.notes-search {
+        position: absolute;
+        right: 15px;
+        top: 10px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 50px;
+        height: 50px;
+        border-radius: 50%;
+        background: $pc;
+        color: $fg;
+        i {
+            font-size: 18px;
+        }
+        opacity: 0.5;
+        &:hover { opacity: 1; }
+    }
+}

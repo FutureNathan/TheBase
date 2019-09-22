@@ -1,0 +1,52 @@
+$pc: #23419b;
+$ac: #c12023;
+
+$c1: #f78011;
+$c2: #f7f311;
+$c3: #112cf7;
+$c4: #6911f7;
+$c5: #f711a3;
+$c6: #20bf23;
+
+$bg: black;
+
+$bg1: $bg;
+$bg2: lighten($bg, 2%);
+$bg3: lighten($bg, 4%);
+$bg4: lighten($bg, 6%);
+$bg5: lighten($bg, 8%);
+$bg6: lighten($bg, 10%);
+$bg7: lighten($bg, 12%);
+$bg8: lighten($bg, 14%);
+$bg9: lighten($bg, 16%);
+$bg10: lighten($bg, 18%);
+
+$fg: white;
+
+$fg1: $fg;
+$fg2: darken($fg, 2%);
+$fg3: darken($fg, 4%);
+$fg4: darken($fg, 6%);
+$fg5: darken($fg, 8%);
+$fg6: darken($fg, 10%);
+$fg7: darken($fg, 12%);
+$fg8: darken($fg, 14%);
+$fg9: darken($fg, 16%);
+$fg10: darken($fg, 18%);
+
+$header: 50px;
+$content: calc(100vh - 50px);
+
+$desktop: 768px;
+$mobile: 480px;
+
+div.content {
+    width: 100%;
+    min-height: $content;
+}
+
+div.wrap {
+    width: 100%;
+    max-width: $desktop;
+    margin: auto;
+}
