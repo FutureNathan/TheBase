@@ -1,0 +1,53 @@
+<div class="content">
+    <div class="form">
+        <h2>
+            <i class="far fa-clipboard"></i>
+            Notes App
+        </h2>
+
+        <div class="form-buttons">
+            <a class="small-button easing" (click)="this.tab = 'register'" [class.active]="this.tab === 'register'">
+                Register
+            </a>
+            <a class="small-button easing" (click)="this.tab = 'login'" [class.active]="this.tab === 'login'">
+                Login
+            </a>
+        </div>
+
+        <p>
+            <i class="fas fa-envelope-open-text"></i>
+            Email
+        </p>
+        <input type="email" [(ngModel)]="this.index.form.email" (input)="this.index.verifyEmail(this.tab)"/>
+
+        <p
+            class="info easing"
+            [class.red]="this.index.validation.email.state === -1"
+            [class.green]="this.index.validation.email.state === 1">
+            {{this.index.validation.email.message}}
+        </p>
+
+        <p>
+            <i class="fas fa-lock"></i>
+            Password
+        </p>
+        <input type="password" [(ngModel)]="this.index.form.password1"/>
+
+        <div class="hidden" [class.active]="this.tab === 'login'">
+            <p>
+                <i class="fas fa-lock"></i>
+                Confirm Password
+            </p>
+            <input type="password" [(ngModel)]="this.index.form.password2"/>
+        </div>
+
+        <a class="button easing" (click)="this.index.register(this.tab)">
+            {{this.tab}}
+        </a>
+        <p
+            class="info float easing"
+            [class.red]="this.index.state.form.error">
+            {{this.index.state.form.message}}
+        </p>
+    </div>
+</div>

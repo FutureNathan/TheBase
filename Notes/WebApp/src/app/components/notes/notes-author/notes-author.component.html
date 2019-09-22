@@ -1,0 +1,19 @@
+<div class="author">
+    <div class="wrap">
+        <textarea [(ngModel)]="this.notes.form.text" class="easing" placeholder="Write a note..." (focus)="this.expanded = true" (blur)="this.expanded = false" [class.expanded]="this.expanded"></textarea>
+        <div class="select-categories easing" [class.active]="this.category" (click)="this.category = !this.category">
+            <a
+                class="select-category {{tag.color}} easing"
+                *ngFor="let tag of this.tags.data; let i = index;"
+                (click)="this.notes.form.tag = tag">
+                {{tag.name}}
+            </a>
+        </div>
+        <a class="category-button easing {{this.notes.form.tag.color}}" (click)="this.category = !this.category">
+            Category: {{this.notes.form.tag.name ? this.notes.form.tag.name : 'None'}}
+        </a>
+        <a class="submit-button easing" (click)="this.notes.submit()">
+            Submit
+        </a>
+    </div>
+</div>

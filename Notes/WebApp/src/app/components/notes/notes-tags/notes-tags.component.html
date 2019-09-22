@@ -1,0 +1,10 @@
+<div class="tags">
+    <a class="tag easing"
+        *ngFor="let tag of this.tags.data; let i = index;"
+        (click)="this.selectTag(tag)"
+        [class.active]="this.notes.tag._id === tag._id"
+    >
+        {{tag.name}}
+        <div class="marker {{tag.color}}"></div>
+    </a>
+</div>

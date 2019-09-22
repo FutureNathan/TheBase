@@ -1,0 +1,28 @@
+<header>
+    <div class="wrap">
+        <h1>
+            <i class="far fa-clipboard"></i>
+            Notes
+        </h1>
+        <a class="menu-button easing" (click)="this.tab = !this.tab" [class.active]="this.tab" [class.visible]="this.session.active">
+            <i class="fas fa-ellipsis-v"></i>
+        </a>
+    </div>
+</header>
+
+<div class="wrap wrap-header">
+    <div class="header-menu easing" (click)="this.tab = false" [class.active]="this.tab">
+        <a class="menu-item easing" routerLink="/profile">
+            Profile
+        </a>
+        <a class="menu-item easing" routerLink="/notes">
+            Notes
+        </a>
+        <a class="menu-item easing" routerLink="/tags">
+            Tags
+        </a>
+        <a class="menu-item easing" (click)="this.session.logout()">
+            Logout
+        </a>
+    </div>
+</div>
