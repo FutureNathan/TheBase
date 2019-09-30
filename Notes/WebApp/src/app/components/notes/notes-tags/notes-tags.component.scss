@@ -1,0 +1,35 @@
+@import "../../style.scss";
+
+div.tags {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    width: 100%;
+
+    a.tag {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        width: 120px;
+        height: 60px;
+        margin: 15px;
+        color: $fg;
+        border-radius: 8px;
+        &:hover { background: $bg5; }
+        &.active { background: $bg7; }
+        div.marker {
+            margin: 10px 0 0 0;
+            width: 90px;
+            height: 5px;
+            border-radius: 2.5px;
+            background: $pc;
+            &.c1 { background: $c1; }
+            &.c2 { background: $c2; }
+            &.c3 { background: $c3; }
+            &.c4 { background: $c4; }
+            &.c5 { background: $c5; }
+        }
+    }
+}

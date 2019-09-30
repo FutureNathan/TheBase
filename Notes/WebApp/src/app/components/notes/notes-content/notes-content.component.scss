@@ -1,0 +1,38 @@
+@import "../../style.scss";
+
+div.note-content {
+    padding: 15px;
+}
+
+div.note-item {
+    background: $bg5;
+    padding: 15px;
+    border-radius: 5px;
+    margin: 15px 0;
+
+    h3 {
+        font-size: 18px;
+        font-weight: 400;
+        span {
+            font-size: 12px;
+            font-weight: bold;
+        }
+    }
+
+    div.tag-markers {
+        display: flex;
+        padding: 10px 0;
+        div.tag-marker {
+            width: 32px;
+            height: 6px;
+            background: $pc;
+            border-radius: 2px;
+            margin: 0 15px 0 0;
+            &.c1 { background: $c1; }
+            &.c2 { background: $c2; }
+            &.c3 { background: $c3; }
+            &.c4 { background: $c4; }
+            &.c5 { background: $c5; }
+        }
+    }
+}
