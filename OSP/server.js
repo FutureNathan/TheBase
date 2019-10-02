@@ -15,6 +15,8 @@ require('dotenv').config();
 const PORT = process.env.PORT || 3000;
 //Mongoose
 const db = mongoose.connection;
+const MONGODB_URI = process.env.MONGODB_URI;
+console.log(MONGODB_URI);
 
 //-------------------
 //MIDDLEWARE
@@ -53,7 +55,7 @@ app.get('/', (req, res) => {
 //--------------------
 //Connect to MongoDB Cloud Atlas
 //add mongodb uri once we have it
-mongoose.connect(/* insert Mongodb uri variable here */, {useNewUrlPaser: true});
+mongoose.connect(MONGODB_URI, {useNewUrlPaser: true});
 //Error / Success - Development Side
 db.on('error', (error) => {
   console.log(error.message + ' is MongoD not running?');
