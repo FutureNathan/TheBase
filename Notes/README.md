@@ -2,7 +2,7 @@
 
 #### AWS Keys
 
-Admin Creds
+Admin Credentials
 
 ```
 See Nathan for Spreadsheet including these details.
